@@ -55,16 +55,19 @@ def load_logs():
 
 events = load_logs()
 
-severity_counts = {}
+def count_severity(events):
+    severity_counts = {}
+    for event in events:
+        severity = event["severity"]
 
-for event in events:
-    severity = event["severity"]
+        if severity in severity_counts:
+            severity_counts[severity] += 1
+        else:
+            severity_counts[severity] = 1
 
-    if severity in severity_counts:
-        severity_counts[severity] += 1
-    else:
-        severity_counts[severity] = 1
+    return severity_counts
 
+severity_counts = count_severity(events)
 
 ip_count = {}
 
