@@ -1,1 +1,1 @@
-Invoke-WebRequest https://example.com/file.exe
+invoke-WebRequest https://example.com/file.exe
