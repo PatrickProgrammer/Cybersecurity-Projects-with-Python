@@ -4,3 +4,5 @@ __pycache__/
 .vscode/
 scan_results.json
 alerts.json
+.env
+results/
