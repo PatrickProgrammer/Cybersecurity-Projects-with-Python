@@ -9,8 +9,8 @@ Focuses on:
 
 # Important
 
-- Tools developed with a help of AI.
-- Any sample logs or files are not real, however it used as an proof of concept for running code.
-- This repo is for developing SOC analyst skills leans toward Pyton programming
+- Tools developed with a help of AI
+- Any sample logs or files are not real, however it used as a proof of concept for running code.
+- This repo is for developing SOC analyst skills leans toward Python programming
 - Used as Portfolio
 
