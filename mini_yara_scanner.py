@@ -71,13 +71,21 @@ def scan_directory(directory_path, rules):
 
 def export_results(scan_results, output_file_path):
     try:
-        with output_file_path.open("w", enconding="utf-8") as file:
+        with output_file_path.open("w", encoding="utf-8") as file:
             json.dump(scan_results, file, indent=4)
             print("Export Success")
     except Exception as e:
         print(f"Error exporting results to {output_file_path}: {e}")
         print("Export failed")
 
-scan_results = scan_directory(testfile_path, rules)
-pprint(scan_results)
 
+def main() :
+    scan_results = scan_directory(testfile_path, rules)
+    for result in scan_results:
+        pprint(result)
+    
+    export_results(scan_results, output_file_path)
+
+
+if __name__ == "__main__":
+    main()

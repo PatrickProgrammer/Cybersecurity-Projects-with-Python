@@ -1,0 +1,7 @@
+2026-07-19 09:01:13 INFO User=Alice Login Successful IP=10.1.1.15
+
+2026-07-19 09:05:22 WARNING User=Bob Failed Login IP=192.168.1.20
+
+2026-07-19 09:05:25 WARNING User=Bob Failed Login IP=192.168.1.20
+
+2026-07-19 09:05:30 WARNING User=Bob Failed Login IP=192.168.1.20

