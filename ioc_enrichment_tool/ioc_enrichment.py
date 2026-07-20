@@ -74,11 +74,24 @@ def filter_valid_iocs(iocs):
     return valid_iocs
 
 
+def enrich_ioc(ioc):
+    ioc["source"] = None
+    ioc["malicious"] = None
+    ioc["suspicious"] = None
+    ioc["harmless"] = None
+    ioc["reputation"] = None
+    ioc["last_analysis"] = None
+
+    return ioc
+
+
+
 # Load indicators
 indicators = load_indicator(indicators_file_path)
 
 # Build IOC objects
 iocs = []
+enriched_iocs = []
 
 for indicator in indicators:
     iocs.append(build_ioc(indicator))
@@ -90,8 +103,12 @@ for ioc in iocs:
 # Filter
 valid_iocs = filter_valid_iocs(iocs)
 
+for ioc in valid_iocs:
+    enriched_ioc = enrich_ioc(ioc)
+    enriched_iocs.append(enriched_ioc)
 # Output
 print(indicator)
+print(enriched_iocs)
 # print(valid_iocs)
 
 
